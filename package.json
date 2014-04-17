@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.console.js",
-  "version":        "0.8.0",
+  "version":        "0.8.1",
   "description":    "console.log for WebWorkers.",
   "url":            "https://github.com/uupaa/Console.js",
   "keywords":       ["console", "util", "uupaa", "WebModule"],
@@ -13,7 +13,9 @@
     "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
     "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
     "build-release":"node node_modules/uupaa.minify.js --verbose --strict --module",
-    "test":         "",
+    "test":         "npm run test-node; npm run test-browser",
+    "test-node":    "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
+    "test-browser": "open test/index.html",
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
