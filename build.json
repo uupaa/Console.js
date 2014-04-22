@@ -1,0 +1,41 @@
+{
+  "name": {
+    "git": "Console.js",
+    "npm": "uupaa.console.js"
+  },
+  "build": {
+    "files": [
+      "lib/Console.js"
+    ],
+    "output": "release/Console.min.js",
+    "target": [
+      "Worker"
+    ]
+  },
+  "moduleTargets": {
+    "uupaa.console.js": [
+      "Worker"
+    ],
+    "uupaa.minify.js": []
+  },
+  "dependenciesFiles": [],
+  "dependenciesModules": [],
+  "devDependenciesFiles": [
+    "node_modules/uupaa.valid.js/lib/Valid.js",
+    "node_modules/uupaa.help.js/lib/Help.js",
+    "node_modules/uupaa.task.js/lib/Task.js",
+    "node_modules/uupaa.test.js/lib/Test.js",
+    "node_modules/uupaa.watch.js/lib/Watch.js",
+    "node_modules/uupaa.plato.js/lib/Plato.js",
+    "node_modules/uupaa.minify.js/lib/Minify.js"
+  ],
+  "devDependenciesModules": [
+    "uupaa.valid.js",
+    "uupaa.help.js",
+    "uupaa.task.js",
+    "uupaa.test.js",
+    "uupaa.watch.js",
+    "uupaa.plato.js",
+    "uupaa.minify.js"
+  ]
+}
