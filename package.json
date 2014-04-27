@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.console.js",
-  "version":        "0.8.6",
+  "version":        "0.8.7",
   "description":    "console.log for WebWorkers.",
   "url":            "https://github.com/uupaa/Console.js",
   "keywords":       ["console", "util", "uupaa", "WebModule"],
@@ -13,7 +13,11 @@
   "x-build": {
     "files":        ["lib/Console.js"],
     "output":       "release/Console.min.js",
-    "target":       ["Worker"]
+    "target":       ["Worker"],
+    "module": {
+      "develop":    [],
+      "release":    []
+    }
   },
   "dependencies": {
   },
