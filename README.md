@@ -8,9 +8,9 @@ console.log for WebWorkers.
 
 # Document
 
-- [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
-- [Development](https://github.com/uupaa/WebModule/wiki/Development)
 - [Console.js wiki](https://github.com/uupaa/Console.js/wiki/Console)
+- [Development](https://github.com/uupaa/WebModule/wiki/Development)
+- [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
 
 # How to use
 
