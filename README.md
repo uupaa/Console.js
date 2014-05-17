@@ -4,7 +4,7 @@ Console.js
 
 ![](https://travis-ci.org/uupaa/Console.js.png)
 
-console.log for WebWorkers.
+Console with style.
 
 # Document
 
@@ -14,10 +14,28 @@ console.log for WebWorkers.
 
 # How to use
 
+## Browser
+
 ```js
-// for WebWorkers
+<script src="lib/Console.js">
+<script>
+console.log( Console.link("http://example.com") );
+</script>
+```
+
+## WebWorkers
+
+```js
 importScripts("lib/Console.js");
 
-console.log("ok");
+console.log( Console.link("http://example.com") );
+```
+
+## Node.js
+
+```js
+var Zzz = require("lib/Console.js");
+
+console.log( Console.link("http://example.com") );
 ```
 
