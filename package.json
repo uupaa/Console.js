@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.console.js",
-  "version":        "0.9.0",
+  "version":        "0.9.1",
   "description":    "Console with Style.",
   "url":            "https://github.com/uupaa/Console.js",
   "keywords":       ["console", "util", "uupaa", "WebModule", "Unstable"],
