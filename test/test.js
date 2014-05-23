@@ -10,7 +10,7 @@ return new Test("Console", {
     }).add([
 //ok    testConsoleLogs,
         testConsoleColor,
-        testConsoleSource,
+//      testConsoleSource,
         testConsoleLink,
     ]).run().clone();
 
@@ -38,6 +38,7 @@ function testConsoleColor(next) {
     }
 }
 
+/*
 function testConsoleSource(next) {
     Console.source(Console.source + "", "body");
 
@@ -47,6 +48,7 @@ function testConsoleSource(next) {
         next && next.miss();
     }
 }
+ */
 
 function testConsoleLink(next) {
     Console.link("http://example.com/", "Example");
