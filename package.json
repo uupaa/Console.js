@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.console.js",
-  "version":        "0.9.2",
+  "version":        "0.9.3",
   "description":    "Console with Style.",
   "url":            "https://github.com/uupaa/Console.js",
   "keywords":       ["console", "util", "uupaa", "WebModule", "Unstable"],
@@ -21,10 +21,10 @@
     "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
-    "files":        ["lib/Console.js"],
+    "source":       ["lib/Console.js"],
     "output":       "release/Console.min.js",
     "target":       ["all"],
-    "labels":       ["@dev"],
+    "label":        ["@dev"],
     "module": {
       "develop":    [],
       "release":    []
