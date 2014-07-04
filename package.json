@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.console.js",
-  "version":        "0.9.3",
+  "version":        "0.9.4",
   "description":    "Console with Style.",
   "url":            "https://github.com/uupaa/Console.js",
   "keywords":       ["console", "util", "uupaa", "WebModule", "Unstable"],
@@ -33,7 +33,9 @@
   "dependencies": {
   },
   "devDependencies": {
-    "uupaa.nodemodule.js":   "",
+    "uupaa.nodemodule.js": "",
+    "uupaa.reflection.js": "",
+    "uupaa.iphonesimulator.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",
