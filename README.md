@@ -1,8 +1,6 @@
-=========
-Console.js
-=========
+# Console.js [![Build Status](https://travis-ci.org/uupaa/Console.js.png)](http://travis-ci.org/uupaa/Console.js)
 
-![](https://travis-ci.org/uupaa/Console.js.png)
+[![npm](https://nodei.co/npm/uupaa.console.js.png?downloads=true&stars=true)](https://nodei.co/npm/uupaa.console.js/)
 
 Console with style.
 
@@ -34,7 +32,7 @@ console.log( Console.link("http://example.com") );
 ## Node.js
 
 ```js
-var Zzz = require("lib/Console.js");
+var Console = require("lib/Console.js");
 
 console.log( Console.link("http://example.com") );
 ```
