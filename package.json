@@ -1,6 +1,6 @@
 {
   "name": "uupaa.console.js",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Console with Style.",
   "url": "https://github.com/uupaa/Console.js",
   "keywords": [
@@ -15,33 +15,24 @@
     "url": "https://github.com/uupaa/Console.js.git"
   },
   "scripts": {
-    "0": "npm run setup",
-    "1": "npm run ios.start; npm start",
-    "5": "npm run test",
-    "9": "npm run ios.stop; npm stop",
-    "setup": "npm run sync; npm update; npm run page.make; npm run minify",
-    "sync": "node ../WebModule/run/sync.package.scripts.js",
+    "sync": "node ../WebModule/run/sync.js; npm update; node ../WebModule/run/page.js",
     "watch": "node ../WebModule/run/watch.js --verbose --action minify",
-    "module.add": "node ../WebModule/run/module.add.js",
-    "module.remove": "node ../WebModule/run/module.remove.js",
     "minify": "node ../WebModule/run/minify.js --verbose --strict --keep --pretty",
     "build": "node ../WebModule/run/minify.js --verbose --strict --module",
-    "page.make": "node ../WebModule/run/page.make.js --verbose",
-    "test": "npm run minify; npm run test.node; npm run open",
-    "test.node": "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
-    "test.noded": "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/index.node.js",
+    "page": "node ../WebModule/run/page.js --verbose",
+    "test": "npm run minify; npm run node; npm run browser",
+    "node": "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
+    "noded": "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/index.node.js",
+    "browser": "open http://localhost:8000/Console.js/test/index.html",
+    "sim": "node ../WebModule/run/sim.js http://localhost:8000/Console.js/test/index.html",
+    "simx": "node ../WebModule/run/sim.js stop",
     "hint": "jshint lib/*.js",
     "score": "node ../WebModule/run/score.js; open lint/plato/index.html",
     "patch": "node ../WebModule/run/patch.js",
     "start": "cd ../; Python -m SimpleHTTPServer 8000 &",
-    "open": "open http://localhost:8000/Console.js/test/index.html",
-    "stop": "killall -- Python -m SimpleHTTPServer 8000; exit 0",
-    "ios.start": "node ../WebModule/run/ios.start.js",
-    "ios.open": "node ../WebModule/run/ios.open.js http://localhost:8000/Console.js/test/index.html",
-    "ios.stop": "node ../WebModule/run/ios.stop.js"
+    "stop": "killall -- Python -m SimpleHTTPServer 8000; exit 0"
   },
   "webmodule": {
-    "develop": true,
     "source": [
       "lib/Console.js"
     ],
@@ -53,19 +44,7 @@
       "@dev"
     ]
   },
-  "x-build": {
-    "source":       ["lib/Console.js"],
-    "output":       "release/Console.min.js",
-    "target":       ["all"],
-    "label":        ["@dev"],
-    "module": {
-      "develop":    [],
-      "release":    []
-    }
-  },
-  "dependencies": {
-    "uupaa.wmdevtools.js": ""
-  },
+  "dependencies": {},
   "devDependencies": {},
   "lib": "./lib/",
   "main": "./index.js",

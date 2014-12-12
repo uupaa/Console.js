@@ -5,16 +5,20 @@
 <script id="worker" type="javascript/worker">
 onmessage = function(event) {
 
-    if (!global["console"]) { // polyfill WorkerConsole.
-        global["console"] = function() {};
-        global["console"]["log"] = function() {};
-        global["console"]["warn"] = function() {};
-        global["console"]["error"] = function() {};
+    if (!self.console) {
+        self.console = function() {};
+        self.console.log = function() {};
+        self.console.warn = function() {};
+        self.console.error = function() {};
     }
 
     self.MESSAGE = event.data;
 
-    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.wmdevtools.js/lib/WMDevTools.js");
+    importScripts(MESSAGE.BASE_DIR + "../../WebModule/lib/Console.js");
+    importScripts(MESSAGE.BASE_DIR + "../../WebModule/lib/Help.js");
+    importScripts(MESSAGE.BASE_DIR + "../../WebModule/lib/Valid.js");
+    importScripts(MESSAGE.BASE_DIR + "../../WebModule/lib/TestTask.js");
+    importScripts(MESSAGE.BASE_DIR + "../../WebModule/lib/Test.js");
     importScripts(MESSAGE.BASE_DIR + "../lib/Console.js");
     importScripts(MESSAGE.BASE_DIR + "../release/Console.min.js");
     importScripts(MESSAGE.BASE_DIR + "./testcase.js");
@@ -23,7 +27,11 @@ onmessage = function(event) {
 };
 </script>
 
-<script src="../node_modules/uupaa.wmdevtools.js/lib/WMDevTools.js"></script>
+<script src="../../WebModule/lib/Console.js"></script>
+<script src="../../WebModule/lib/Help.js"></script>
+<script src="../../WebModule/lib/Valid.js"></script>
+<script src="../../WebModule/lib/TestTask.js"></script>
+<script src="../../WebModule/lib/Test.js"></script>
 <script src="../lib/Console.js"></script>
 <script src="../release/Console.min.js"></script>
 <script src="./testcase.js"></script>
